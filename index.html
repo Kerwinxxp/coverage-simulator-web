@@ -48,11 +48,46 @@
         transform: translateY(-3px);
     }
 
-    .screenshot {
+    /* 多图布局样式 */
+    .gallery {
         margin-top: 40px;
-        max-width: 85%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .img-half {
+        width: 45%;
         border-radius: 10px;
         box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    }
+
+    .img-full {
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    }
+
+    /* GIF 优化 */
+    .gif {
+        image-rendering: auto;
+        -webkit-backface-visibility: hidden;
+    }
+
+    /* 窄屏（手机）自动竖排 */
+    @media (max-width: 768px) {
+        .row {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .img-half {
+            width: 90%;
+        }
     }
 
     footer {
@@ -74,29 +109,39 @@
     <h1>Wireless Coverage Simulator</h1>
     <p>A MATLAB-based Ray-Tracing Coverage & Dataset Generation Tool</p>
 
-    <!-- 这里修改成你的 MATLAB Web App URL -->
+    <!-- MATLAB Web App 链接 -->
     <a class="launch-btn" href="http://localhost:9988/webapps/home/session.html?app=VisualizeAntennaCoverage" target="_blank">
         📡 Launch Simulator
     </a>
 
-    <img class="screenshot" src="screenshot.png" alt="Simulator Screenshot"/>
+    <!-- 多图展示区 -->
+    <div class="gallery">
+
+        <!-- 上面两张并排图片 -->
+        <div class="row">
+            <img src="img1.png" class="img-half" alt="Screenshot 1">
+            <img src="img2.png" class="img-half" alt="Screenshot 2">
+        </div>
+
+        <!-- 下面一张 GIF 大图 -->
+        <div class="row">
+            <img src="img3.gif" class="img-full gif" alt="Demo Animation">
+        </div>
+
+    </div>
 </div>
 
 <footer>
     <p>
-        <a href="https://github.com/sourabhy1797/RF-Propagation">GitHub Repo</a>
+        <a href="https://github.com/sourabhy1797/RF-Propagation" target="_blank" rel="noopener noreferrer">
+            GitHub Repo
+        </a>
         |
-<a href="https://github.com/sourabhy1797/RF-Propagation/blob/main/README.md" target="_blank">
-    Documentation
-</a>
+        <a href="https://github.com/sourabhy1797/RF-Propagation/blob/main/README.md" target="_blank" rel="noopener noreferrer">
+            Documentation
+        </a>
     </p>
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
