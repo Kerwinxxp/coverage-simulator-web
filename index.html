@@ -48,7 +48,7 @@
         transform: translateY(-3px);
     }
 
-    /* 多图布局样式 */
+    /* 图库容器 */
     .gallery {
         margin-top: 40px;
     }
@@ -60,15 +60,15 @@
         margin-bottom: 25px;
     }
 
-    /* 缩小图像尺寸 */
+    /* 进一步缩小图片尺寸 */
     .img-half {
-        width: 20%;
+        width: 15%;
         border-radius: 10px;
         box-shadow: 0 4px 18px rgba(0,0,0,0.12);
     }
 
     .img-full {
-        width: 50%;
+        width: 30%;
         border-radius: 10px;
         box-shadow: 0 4px 18px rgba(0,0,0,0.12);
     }
@@ -79,7 +79,7 @@
         -webkit-backface-visibility: hidden;
     }
 
-    /* 窄屏（手机）自动竖排 */
+    /* 手机竖屏适配 */
     @media (max-width: 768px) {
         .row {
             flex-direction: column;
@@ -114,21 +114,19 @@
     <h1>Wireless Coverage Simulator</h1>
     <p>A MATLAB-based Ray-Tracing Coverage & Dataset Generation Tool</p>
 
-    <!-- MATLAB Web App 链接 -->
     <a class="launch-btn" href="http://localhost:9988/webapps/home/session.html?app=VisualizeAntennaCoverage" target="_blank">
         📡 Launch Simulator
     </a>
 
-    <!-- 多图展示区 -->
     <div class="gallery">
 
-        <!-- 上面两张并排图片 -->
+        <!-- 上面两个小图 -->
         <div class="row">
             <img src="img1.png" class="img-half" alt="Screenshot 1">
             <img src="img2.png" class="img-half" alt="Screenshot 2">
         </div>
 
-        <!-- 下面一张 GIF 大图 -->
+        <!-- 下面 GIF 主图 -->
         <div class="row">
             <img src="img3.gif" class="img-full gif" alt="Demo Animation">
         </div>
@@ -138,16 +136,11 @@
 
 <footer>
     <p>
-        <a href="https://github.com/sourabhy1797/RF-Propagation" target="_blank" rel="noopener noreferrer">
-            GitHub Repo
-        </a>
+        <a href="https://github.com/sourabhy1797/RF-Propagation" target="_blank">GitHub Repo</a>
         |
-        <a href="https://github.com/sourabhy1797/RF-Propagation/blob/main/README.md" target="_blank" rel="noopener noreferrer">
-            Documentation
-        </a>
+        <a href="https://github.com/sourabhy1797/RF-Propagation/blob/main/README.md" target="_blank">Documentation</a>
     </p>
 </footer>
 
 </body>
 </html>
-
