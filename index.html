@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wireless Coverage Simulator</title>
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        margin: 0;
+        background: #f7f9fc;
+        color: #222;
+        text-align: center;
+    }
+
+    .container {
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+        margin-top: 0;
+    }
+
+    .launch-btn {
+        margin-top: 40px;
+        background: #0066ff;
+        padding: 18px 48px;
+        font-size: 22px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        transition: 0.2s;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .launch-btn:hover {
+        background: #0050cc;
+        transform: translateY(-3px);
+    }
+
+    .screenshot {
+        margin-top: 40px;
+        max-width: 85%;
+        border-radius: 10px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    }
+
+    footer {
+        margin-top: 80px;
+        padding: 20px;
+        color: #888;
+    }
+
+    footer a {
+        color: #0066ff;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Wireless Coverage Simulator</h1>
+    <p>A MATLAB-based Ray-Tracing Coverage & Dataset Generation Tool</p>
+
+    <!-- 这里修改成你的 MATLAB Web App URL -->
+    <a class="launch-btn" href="http://localhost:9988/webapps/home/session.html?app=VisualizeAntennaCoverage" target="_blank">
+        📡 Launch Simulator
+    </a>
+
+    <img class="screenshot" src="screenshot.png" alt="Simulator Screenshot"/>
+</div>
+
+<footer>
+    <p>
+        <a href="https://github.com/YOUR_GITHUB_REPO">GitHub Repo</a>
+        |
+        <a href="#">Documentation</a>
+    </p>
+</footer>
+
+</body>
+</html>
