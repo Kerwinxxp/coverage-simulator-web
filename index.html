@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Wireless Coverage Simulator</title>
+
 <style>
     body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -30,25 +31,71 @@
         margin-top: 0;
     }
 
-    .launch-btn {
+    /* ---- 多按钮卡片式布局 ---- */
+    .apps-section {
         margin-top: 40px;
-        background: #0066ff;
-        padding: 18px 48px;
-        font-size: 22px;
-        border-radius: 10px;
-        text-decoration: none;
-        color: white;
+    }
+
+    .apps-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .apps-subtitle {
+        font-size: 15px;
+        color: #666;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .app-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .app-card {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 18px 20px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+        min-width: 240px;
+        max-width: 280px;
+        text-align: left;
+    }
+
+    .app-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0 0 6px 0;
+    }
+
+    .app-desc {
+        font-size: 14px;
+        color: #666;
+        margin: 0 0 14px 0;
+    }
+
+    .app-btn {
         display: inline-block;
+        padding: 10px 18px;
+        font-size: 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        background: #0066ff;
+        color: #fff;
         transition: 0.2s;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
-    .launch-btn:hover {
+    .app-btn:hover {
         background: #0050cc;
-        transform: translateY(-3px);
+        transform: translateY(-2px);
     }
 
-    /* 图库容器 */
+    /* ---- 图库 ---- */
     .gallery {
         margin-top: 40px;
     }
@@ -60,7 +107,6 @@
         margin-bottom: 25px;
     }
 
-    /* 进一步缩小图片尺寸 */
     .img-half {
         width: 14%;
         border-radius: 10px;
@@ -73,25 +119,24 @@
         box-shadow: 0 4px 18px rgba(0,0,0,0.12);
     }
 
-    /* GIF 优化 */
     .gif {
         image-rendering: auto;
         -webkit-backface-visibility: hidden;
     }
 
-    /* 手机竖屏适配 */
+    /* ---- 手机适配 ---- */
     @media (max-width: 768px) {
         .row {
             flex-direction: column;
             gap: 10px;
         }
-
-        .img-half {
-            width: 90%;
-        }
-
+        .img-half,
         .img-full {
             width: 90%;
+        }
+        .app-card {
+            min-width: 100%;
+            max-width: 100%;
         }
     }
 
@@ -114,24 +159,80 @@
     <h1>Wireless Coverage Simulator</h1>
     <p>A MATLAB-based Ray-Tracing Coverage & Dataset Generation Tool</p>
 
-    <a class="launch-btn" href="http://129.120.61.172:9988/webapps/home/session.html?app=VisualizeAntennaCoverage"
- target="_blank">
-        📡 Launch Simulator
-    </a>
+    <!-- 六个按钮模块 -->
+    <div class="apps-section">
+        <div class="apps-title">Launch a Simulator</div>
+        <p class="apps-subtitle">Select one of the available simulation modes:</p>
 
+        <div class="app-grid">
+
+            <!-- Button 1 -->
+            <div class="app-card">
+                <div class="app-name">Simulator 1</div>
+                <p class="app-desc">Wireless coverage simulation mode 1.</p>
+                <a class="app-btn" 
+                   href="http://129.120.61.172:9988/webapps/home/session.html?app=VisualizeAntennaCoverage"
+                   target="_blank">Launch</a>
+            </div>
+
+            <!-- Button 2 -->
+            <div class="app-card">
+                <div class="app-name">Simulator 2</div>
+                <p class="app-desc">Wireless coverage simulation mode 2.</p>
+                <a class="app-btn"
+                   href="http://129.120.61.172:9988/webapps/home/session.html?app=VisualizeAntennaCoverage"
+                   target="_blank">Launch</a>
+            </div>
+
+            <!-- Button 3 -->
+            <div class="app-card">
+                <div class="app-name">Simulator 3</div>
+                <p class="app-desc">Wireless coverage simulation mode 3.</p>
+                <a class="app-btn"
+                   href="http://129.120.61.172:9988/webapps/home/session.html?app=VisualizeAntennaCoverage"
+                   target="_blank">Launch</a>
+            </div>
+
+            <!-- Button 4 -->
+            <div class="app-card">
+                <div class="app-name">Simulator 4</div>
+                <p class="app-desc">Wireless coverage simulation mode 4.</p>
+                <a class="app-btn"
+                   href="http://129.120.61.172:9988/webapps/home/session.html?app=VisualizeAntennaCoverage"
+                   target="_blank">Launch</a>
+            </div>
+
+            <!-- Button 5 -->
+            <div class="app-card">
+                <div class="app-name">Simulator 5</div>
+                <p class="app-desc">Wireless coverage simulation mode 5.</p>
+                <a class="app-btn"
+                   href="http://129.120.61.172:9988/webapps/home/session.html?app=VisualizeAntennaCoverage"
+                   target="_blank">Launch</a>
+            </div>
+
+            <!-- Button 6 -->
+            <div class="app-card">
+                <div class="app-name">Simulator 6</div>
+                <p class="app-desc">Wireless coverage simulation mode 6.</p>
+                <a class="app-btn"
+                   href="http://129.120.61.172:9988/webapps/home/session.html?app=VisualizeAntennaCoverage"
+                   target="_blank">Launch</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 图库部分保持原样 -->
     <div class="gallery">
-
-        <!-- 上面两个小图 -->
         <div class="row">
             <img src="img1.png" class="img-half" alt="Screenshot 1">
             <img src="img2.png" class="img-half" alt="Screenshot 2">
         </div>
 
-        <!-- 下面 GIF 主图 -->
         <div class="row">
             <img src="img3.gif" class="img-full gif" alt="Demo Animation">
         </div>
-
     </div>
 </div>
 
@@ -145,6 +246,3 @@
 
 </body>
 </html>
-
-
-
